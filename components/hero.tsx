@@ -15,7 +15,7 @@ const Hero = () => {
         <h1>
           Hi, I&apos;m <span className='text-primary'>David</span>
         </h1>
-        <h1>A front-end developer web developer</h1>
+        <h1>A front-end web developer</h1>
       </div>
       <p className='text-center text-gray-500 font-medium sm:max-w-md mx-auto sm:text-2xl'>
         I&apos;m focused on building responsive front-end web applications
