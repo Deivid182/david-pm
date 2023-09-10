@@ -67,6 +67,15 @@ export const projects = [
     stack: ["ReactJS", "TailwindCSS", "MongoDB", "NextJS", "Prisma"],
     image: "/assets/projects/tweeter.png",
     code: "https://github.com/Deivid182/tweeter-clone",
-    demo: '/'
+    demo: 'https://tweeter-clone-2clphtipc-deivid182.vercel.app/'
   },
+  {
+    id: 6,
+    name: 'Web Videos',
+    shortDescription: 'Technical test with MERN stack.',
+    longDescription: "I found this technical test on Youtube and I tried to replicate it using the MERN stack. The users can create, edit and delete videos, and also they can like videos and follow the creator of the video.",
+    stack: ["ReactJS", "TailwindCSS", "ExpressJS", "MongoDB", "NodeJS", "ShadcnUI", "TS"],
+    code: "https://github.com/Deivid182/video-app-client",
+    demo: 'https://resplendent-dasik-ce178a.netlify.app/'
+  }
 ]
