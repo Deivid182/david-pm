@@ -75,6 +75,7 @@ export const projects = [
     shortDescription: 'Technical test with MERN stack.',
     longDescription: "I found this technical test on Youtube and I tried to replicate it using the MERN stack. The users can create, edit and delete videos, and also they can like videos and follow the creator of the video.",
     stack: ["ReactJS", "TailwindCSS", "ExpressJS", "MongoDB", "NodeJS", "Shadcn UI", "TS"],
+    image: "/assets/projects/web-videos.png",
     code: "https://github.com/Deivid182/video-app-client",
     demo: 'https://resplendent-dasik-ce178a.netlify.app/'
   }
