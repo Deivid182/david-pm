@@ -1,11 +1,27 @@
+"use client"
 import Image from 'next/image';
 import Link from 'next/link';
 import { AiFillGithub, AiOutlineMail } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
 import FormContact from './form-contact';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
+import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 const Contact = () => {
+
+  const [copied, setCopied] = useState('');
+
+  const handleCopy = (email: string) => {
+    setCopied(email);
+    navigator.clipboard.writeText(email);
+    toast.success('Email copied');
+    setTimeout(() => {
+      setCopied('');
+    }, 2000);
+  };
+
+
   return (
     <>
       <div id='contact' className='grid grid-cols-5 gap-4 max-container w-full'>
@@ -40,19 +56,18 @@ const Contact = () => {
                 <AiFillGithub className='h-6 w-6' size={24} />
               </Link>
               <Link
-                href='https://www.linkedin.com/in/deivid-fernandes/'
+                href='https://linkedin.com/in/david-pmjs'
                 target='_blank'
                 rel='noreferrer'
               >
                 <FaLinkedinIn className='h-6 w-6' size={24} />
               </Link>
-              <Link
-                href='https://www.linkedin.com/in/deivid-fernandes/'
-                target='_blank'
-                rel='noreferrer'
+              <div
+                onClick={() => handleCopy('davidmendoza182@outlook.com')}
+                className='cursor-pointer'
               >
-                <AiOutlineMail className='h-6 w-6' size={24} />
-              </Link>
+                <AiOutlineMail className={'w-6 h-6'} size={24} />
+              </div>
             </div>
           </div>
         </div>

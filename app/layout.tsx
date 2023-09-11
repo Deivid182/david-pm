@@ -2,6 +2,7 @@ import Navbar from '@/components/nav-bar';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
+import ToasterProvider from '@/components/toaster-provider';
 
 const raleway = Raleway({ subsets: ['latin'] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={raleway.className}>
+        <ToasterProvider />
         <Navbar />
         {children}
       </body>

@@ -4,7 +4,7 @@ import Button from './ui/button';
 const FormContact = () => {
   return (
     <form
-      action='https://getform.io/f/08ebcd37-f5b5-45be-8c13-714f011ce060'
+      action='https://getform.io/f/de69ba9a-2d0b-42d6-8441-61d7db0b51bb'
       method='POST'
       encType='multipart/form-data'
     >
