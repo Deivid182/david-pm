@@ -54,7 +54,7 @@ const Hero = () => {
         </Link>
         <div
           onClick={() => handleCopy('davidmendoza182@outlook.com')}
-          className='flex items-center justify-center max-sm:w-12 max-sm:h-12 w-16 h-16'
+          className='flex items-center justify-center max-sm:w-12 max-sm:h-12 w-16 h-16 cursor-pointer'
         >
           <AiOutlineMail className={'max-sm:w-8 max-sm:h-8 w-12 h-12'} />
         </div>

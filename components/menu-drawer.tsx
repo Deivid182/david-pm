@@ -2,7 +2,8 @@
 import { navLinks } from '@/utils';
 import { Dialog, Transition } from '@headlessui/react';
 import Link from 'next/link';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
+import toast from 'react-hot-toast';
 import {
   AiOutlineCloseCircle,
   AiFillGithub,
@@ -16,6 +17,18 @@ interface MenuDrawerProps {
 }
 
 const MenuDrawer: React.FC<MenuDrawerProps> = ({ isOpen, onClose }) => {
+
+  const [copied, setCopied] = useState('');
+
+  const handleCopy = (email: string) => {
+    setCopied(email);
+    navigator.clipboard.writeText(email);
+    toast.success('Email copied');
+    setTimeout(() => {
+      setCopied('');
+    }, 2000);
+  };
+
   return (
     <Transition.Root show={isOpen} as={Fragment}>
       <Dialog as='div' onClose={onClose} className={'z-50 relative'}>
@@ -83,19 +96,18 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({ isOpen, onClose }) => {
                             <AiFillGithub className='h-6 w-6' size={24} />
                           </Link>
                           <Link
-                            href='https://www.linkedin.com/in/deivid-fernandes/'
+                            href='https://www.linkedin.com/in/david-pmjs'
                             target='_blank'
                             rel='noreferrer'
                           >
                             <FaLinkedinIn className='h-6 w-6' size={24} />
                           </Link>
-                          <Link
-                            href='https://www.linkedin.com/in/deivid-fernandes/'
-                            target='_blank'
-                            rel='noreferrer'
+                          <div
+                            onClick={() => handleCopy('davidmendoza182@outlook.com')}
+                            className='cursor-pointer'
                           >
-                            <AiOutlineMail className='h-6 w-6' size={24} />
-                          </Link>
+                            <AiOutlineMail className={'w-6 h-6'} size={24} />
+                          </div>
                         </div>
                       </div>
                     </div>
